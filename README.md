@@ -5,7 +5,7 @@ Cliccare sull'immagine per aprire il video
 [![Link al video](https://i9.ytimg.com/vi_webp/TV5R1-nHoLA/mqdefault.webp?sqp=CNCbwLMG&rs=AOn4CLDk8I_2IyR1cB1tg2ZGTKWxfHGoNg)](https://youtu.be/TV5R1-nHoLA?si=Xm8e_RjTX4Js6RtM)
 
 ## Cos'è?
-Gioco multiplayer online per approfondire la mia conoscenza di Flask, javascript, css, utilizzo pratico dei cookies e blender per la creazione dell'immagine nello sfondo della home
+Gioco multiplayer online per approfondire la mia conoscenza di Flask, javascript, css, utilizzo pratico dei cookies in python e blender per la creazione dell'immagine nello sfondo della home
 
 Tutto il progetto è stato ideato e sviluppato interamente da me, come progetto personale per divertimento e approfondire la mia conoscenza relatica agli argomenti sopra citati.
 Naturalmente, questo sito web è stato progettato per essere giocato su dispostivi diversi, in modo che due giocatori in luoghi e dispositivi completamente diversi possano sfidarsi e divertirsi insieme.
