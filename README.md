@@ -1,4 +1,4 @@
-# TicTacToe-with-Flask
+# TicTacToe-Online-Game-with-Flask
 ### Video anteprima del gioco
 Cliccare sull'immagine per aprire il video
 
