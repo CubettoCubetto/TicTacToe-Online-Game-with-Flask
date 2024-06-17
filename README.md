@@ -26,4 +26,4 @@ Molto semplice, scaricare tutta la repository, installare python 3.9 o superiore
 pip install Flask
 pip install -U flask-cors
 ```
-avviare TrisServer.py e aprire un browser in [http://127.0.0.1:8002](http://127.0.0.1:8002)
+avviare WebServer.py e aprire un browser in [http://127.0.0.1:8002](http://127.0.0.1:8002)
