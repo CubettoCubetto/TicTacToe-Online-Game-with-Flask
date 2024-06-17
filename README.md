@@ -1,6 +1,7 @@
 # TicTacToe-with-Flask
 ### Video anteprima del gioco
 Cliccare sull'immagine per aprire il video
+
 [![Link al video](https://i9.ytimg.com/vi_webp/TV5R1-nHoLA/mqdefault.webp?sqp=CNCbwLMG&rs=AOn4CLDk8I_2IyR1cB1tg2ZGTKWxfHGoNg)](https://youtu.be/TV5R1-nHoLA?si=Xm8e_RjTX4Js6RtM)
 
 ## Cos'è?
