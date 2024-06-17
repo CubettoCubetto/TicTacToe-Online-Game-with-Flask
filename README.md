@@ -1,6 +1,8 @@
 # TicTacToe-with-Flask
-Anteprima del gioco: https://youtu.be/TV5R1-nHoLA?si=3eLLuNFfDXGACRFL
+### Video anteprima del gioco
+[![Link al video](https://i9.ytimg.com/vi_webp/TV5R1-nHoLA/mqdefault.webp?sqp=CNCbwLMG&rs=AOn4CLDk8I_2IyR1cB1tg2ZGTKWxfHGoNg)]([http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE](https://youtu.be/TV5R1-nHoLA?si=Xm8e_RjTX4Js6RtM))
 
+## Cos'è?
 Gioco multiplayer online per approfondire la mia conoscenza di Flask, javascript, css, utilizzo pratico dei cookies e blender per la creazione dell'immagine nello sfondo
 
 Tutto il progetto è stato ideato e sviluppato interamente da me, come progetto personale per divertimento e approfondire la mia conoscenza relatica agli argomenti sopra citati.
@@ -14,3 +16,5 @@ Lo scambio di informazioni tra Server e Client avviene grazie a delle richieste 
 - /api/resetGame  # quando un giocatore preme il pulsante "restart" esegue una richiesta POST a questo url, per chiedere il reset della partita
 
 I cookies sono inoltre generati attraverso la funzione crittografica di Hash, rendendo impossibile barare inviando mosse al post dell'avversario.
+
+## Come installare 
