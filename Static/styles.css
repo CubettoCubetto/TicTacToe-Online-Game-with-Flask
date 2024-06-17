@@ -1,0 +1,354 @@
+*, *::after, **::before{
+    box-sizing: border-box;
+}
+:root {
+    --cell-size: min(min(250px,30vw),18vh);
+    --mark-size: calc(var(--cell-size) * .9);
+    --x-color: #c11b1b;
+    --x-back-color: #ffdddd;
+    --circle-back-color:#e9ffce;
+    --circle-color: #2ab205;
+}
+body{
+    margin:0;
+}
+
+.tornaIndietro button{
+    position: fixed;
+    top: 1vw;
+    left: 1vh;
+    color: rgb(0, 0, 91);
+    font-size: 1vw;
+    padding: 3vw;
+    border: 2px solid rgb(0, 110, 255);
+    background-color: rgb(131, 189, 255);
+    border-radius: 15px;
+    cursor: pointer;
+
+    animation-name: AnimationsWinning-HomeButton-Not-Hovered;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+.tornaIndietro button:hover{
+    animation-name: AnimationsWinning-HomeButton-Hovered;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.menù-in-alto {
+    position: fixed;
+    width: 80vw;
+    top:min(10vh,10px);
+    left:10vw;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    border-bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.menù-in-alto {
+    color: rgb(169, 169, 169);
+    font-size: min(min(4rem,8vw),8vw);
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+    text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+      1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+      5px 13px 15px black;
+}
+
+.menù-in-alto:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+    text-shadow: 1px -1px 0 grey, 1px -2px 0 grey, 1px -3px 0 grey,
+      1px -4px 0 grey, 1px -5px 0 grey, 1px -6px 0 grey, 1px -7px 0 grey,
+      1px -8px 0 grey, 5px -13px 15px black, 5px -13px 25px #808080;
+  }
+  
+.board {
+    position: fixed;
+    top:20vh;
+    width: 100vw;
+    height: 60vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);   
+}
+
+.cell.x-turn{
+    background-color: var(--x-back-color);
+}
+.cell.circle-turn{
+    background-color: var(--circle-back-color);
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3){
+    border-top: none;
+}
+
+.cell:nth-child(3n+1){
+    border-left: none;
+}
+.cell:nth-child(3n+3){
+    border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7){
+    border-bottom: none;
+}
+
+.cell.x,
+.cell.circle{
+    cursor: not-allowed;
+}
+.cell.x::before,
+.cell.x::after{
+    background-color: var(--x-color);
+}
+.cell.circle::before{
+    background-color: var(--circle-color);
+}
+
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after
+{
+    background-color: lightgray
+}
+
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after{
+    content: '';
+    position: absolute;
+    width: calc(var(--mark-size) * .15);
+    height: var(--mark-size);
+
+}
+
+
+.cell.x::before,
+.board.x .cell:hover::before{
+    transform: rotate(45deg);
+}
+
+.cell.x::after,
+.board.x .cell:hover::after{
+    transform: rotate(-45deg)
+}
+
+ 
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.cell.circle::before,
+.board.circle .cell:not(.x):not(.circle):hover::before{
+    width: var(--mark-size);
+    height: var(--mark-size);
+    
+}
+
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after{
+    width: calc(var(--mark-size) * .7);
+    height: calc(var(--mark-size) * .7);
+    background-color: var(--circle-back-color);
+}
+
+@keyframes AnimationsWinning-Message-Red{
+    0%{background-color: transparent; color: transparent}
+    100% {background-color: rgba(0, 0, 0, 0.937); color: var(--x-color)}
+}
+@keyframes AnimationsWinning-Message-Green{
+    0%{background-color: transparent; color: transparent}
+    100% {background-color: rgba(0, 0, 0, 0.937); color: var(--circle-color)}
+}
+@keyframes AnimationsWinning-Message-Gray{
+    0%{background-color: transparent; color: transparent}
+    100% {background-color: rgba(0, 0, 0, 0.937); color: rgb(171, 171, 171)}
+}
+
+
+
+@keyframes AnimationsWinning-Button{
+    0%{background-color:transparent;color:transparent;border:3px solid transparent}
+    100% {background-color:white;color:black;border:3px solid black}
+}
+
+@keyframes AnimationsWinning-Button-Hovered{
+    0%{font-size: 5rem;}
+    100% {font-size: 7rem;}
+}
+@keyframes AnimationsWinning-Button-Not-Hovered{ 
+    0% {font-size: 7rem;}
+    100%{font-size: 5rem;}
+}
+
+@keyframes AnimationsWinning-HomeButton-Hovered{
+    0%{font-size: 1rem;}
+    100% {font-size: 2rem;}
+}
+@keyframes AnimationsWinning-HomeButton-Not-Hovered{
+    0%{font-size: 2rem;}
+    100% {font-size: 1rem;}
+}
+
+.winning-message{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(22, 22, 22, 0.8);
+    justify-content: center;
+    align-items: center;
+    font-size:8rem;
+}
+
+.winning-message.x{
+    animation-name: AnimationsWinning-Message-Red;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.winning-message.draw{
+    animation-name: AnimationsWinning-Message-Gray;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.winning-message.circle{
+    animation-name: AnimationsWinning-Message-Green;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.winning-message button:not(.hovered){
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid rgb(255 255 255);
+    border-radius: 10px;
+    padding: .25em .5em;
+    cursor: pointer; 
+    animation-name: AnimationsWinning-Button;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.winning-message button.hovered{
+    font-size: 5rem;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: .25em .5em;
+    cursor:pointer; 
+    animation-name: AnimationsWinning-Button-Not-Hovered;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.winning-message button:hover{  
+    font-size: 5rem;
+    animation-name: none;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid rgb(255 255 255);
+    padding: .25em .5em;
+    cursor: pointer; 
+    animation-name: AnimationsWinning-Button-Hovered;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+
+}
+
+.winning-message.show{
+    display: flex;
+    text-align: center;
+}
+
+.whoIamPlayingFor{
+    margin-top: 85vh;
+    font-size: 20px;
+    text-align: center;
+}
+
+.whoIamPlayingFor.x{
+    color: red;
+}
+.whoIamPlayingFor.circle{
+    color: green;
+}
+
+.punteggi {
+    box-sizing: border-box;
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.punteggi .numeri {
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-size: 80px;
+    width: 80%;
+}
+
+.punteggi.x, .punteggi.pareggi, .punteggi.circle {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.punteggi.x {
+    color: red;
+}
+
+.punteggi.pareggi {
+    color: rgb(65, 65, 65);
+}
+
+.punteggi.circle {
+    color: green;
+}
+
+
+
+

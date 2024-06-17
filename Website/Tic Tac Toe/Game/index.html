@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="tornaIndietro">
+        <button id="homeButton">Home</button>
+    </div>
+    <div class="menù-in-alto">
+        <h2>Tic Tac Toe</h2>
+    </div>
+    <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+    
+    <div class="punteggi">
+        <div class="whoIamPlayingFor" id="whoIamPlayingFor"><h3></h3></div> 
+        <div class="numeri">
+            <div class="punteggi x" id="punteggi-x"></div>
+            <div class="punteggi pareggi" id="pareggi"></div>
+            <div class="punteggi circle" id="punteggi-circle"></div>
+        </div>
+    </div>
+    <div class="winning-message" id="winningMessage">
+        
+        <div class="data-winning-message-text" >
+            <div data-winning-message-text>O WINS </div>
+            <button id="restartButton">Restart</button>
+        </div>
+    </div>
+</body>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <script src="script.js"></script>
+</html>
