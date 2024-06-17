@@ -8,6 +8,7 @@ Gioco multiplayer online per approfondire la mia conoscenza di Flask, javascript
 Tutto il progetto è stato ideato e sviluppato interamente da me, come progetto personale per divertimento e approfondire la mia conoscenza relatica agli argomenti sopra citati.
 Naturalmente, questo sito web è stato progettato per essere giocato su dispostivi diversi, in modo che due giocatori in luoghi e dispositivi completamente diversi possano sfidarsi e divertirsi insieme.
 
+## API
 Lo scambio di informazioni tra Server e Client avviene grazie a delle richieste POST ai seguenti url
 - /api/joinRoom   # per entrare in una stanza già creata come secondo giocatore
 - /api/createRoom # per creare una stanza
