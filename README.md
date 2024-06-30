@@ -7,11 +7,11 @@ Cliccare sull'immagine per aprire il video
 ## Cos'è?
 Gioco multiplayer online per approfondire la mia conoscenza di Flask, javascript, css, utilizzo pratico dei cookies in python e blender per la creazione dell'immagine nello sfondo della home
 
-Tutto il progetto è stato ideato e sviluppato interamente da me, come progetto personale per divertimento e approfondire la mia conoscenza relatica agli argomenti sopra citati.
+Tutto il progetto è stato ideato e sviluppato interamente da me, come progetto personale per divertimento e approfondire la mia conoscenza relativa agli argomenti sopra citati.
 Naturalmente, questo sito web è stato progettato per essere giocato su dispostivi diversi, in modo che due giocatori in luoghi e dispositivi completamente diversi possano sfidarsi e divertirsi insieme.
 
 ## API
-Lo scambio di informazioni tra Server e Client avviene grazie a delle richieste POST ai seguenti url
+Lo scambio di informazioni tra Server e Client avviene grazie a delle richieste http POST ai seguenti url
 - /api/joinRoom   # per entrare in una stanza già creata come secondo giocatore
 - /api/createRoom # per creare una stanza
 - /api/makeMove   # per mandare al server una richiesta di effettuare una mossa. Il server effettuerà anche tutti i controlli che la mossa inviata sia effettivamente valida
@@ -26,4 +26,4 @@ Molto semplice, scaricare tutta la repository, installare python 3.9 o superiore
 pip install Flask
 pip install -U flask-cors
 ```
-avviare WebServer.py e aprire un browser in [http://127.0.0.1:8002](http://127.0.0.1:8002)
+avviare WebServer.py e aprire un browser digitando il seguente indirizzo [http://127.0.0.1:8002](http://127.0.0.1:8002)
